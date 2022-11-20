@@ -5,7 +5,7 @@
   *@a: list
   *Return: returns 1
 */
-int p_char(va_list a)
+int print_char(va_list a)
 {
 	char c;
 	
@@ -20,7 +20,7 @@ int p_char(va_list a)
   *Return: returns 1
 */
 
-int p_int(va_list b)
+int print_int(va_list b)
 {
 	int c;
 	int write;
@@ -36,7 +36,7 @@ int p_int(va_list b)
   *Return: returns 1
 */
 
-int p_float(va_list x)
+int print_float(va_list x)
 {
 	float c;
 	int write;
@@ -52,7 +52,7 @@ int p_float(va_list x)
   *Return: returns 1
 */
 
-int p_string(va_list d)
+int print_string(va_list d)
 {
 	char *c;
 	int write;
