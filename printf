@@ -1,0 +1,46 @@
+/**
+  *print_all - print anything
+  *@format: list of argument types
+  *Return: return 0
+*/
+
+int _printf(const char *format, ...)
+{
+	unsigned int i = 0;
+	unsigned int j = 0;
+	unsigned int len = 0;
+	va_list user_list;
+
+	datatype d[] = {
+		{'c', p_char},
+		{'s', p_string},
+		{'%', p_percent},
+		{'d', p_int},
+		{'i', p_int}
+	};
+
+	va_start(user_list, format);
+
+	while (*(format + i) != '\0' && (*(format + i)))
+	{
+		j = 0;
+
+		while (j < 5 && (format[i] != (d[j].chrter)))
+		{
+			j++;
+		}
+
+		len++;
+
+		if (j < 5)
+		{
+			d[j].f(user_list);
+		}
+		
+		i++;
+	}
+
+	write(1,'\n', 1);
+
+	va_end(user_list);
+}

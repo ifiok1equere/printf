@@ -15,13 +15,13 @@
 #include <unistd.h>
 #include <string.h>
 
-int _printf(char *, ...);
+int _printf(const char *, ...);
 
 
 int _strlen(const char *);
 
 /* handler */
-int percent_handler(char *, int *, va_list)
+int percent_handler(const char *, int *, va_list);
 
 /* format functions */
 int print_str(va_list);

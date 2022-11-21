@@ -14,7 +14,7 @@ int print_rev(va_list list)
 
 	for (i = (len - 1); i >= 0; i--)
 	{
-		//display output
+		/*display output*/
 	}
 
 	return (len);

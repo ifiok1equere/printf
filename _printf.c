@@ -9,6 +9,7 @@
  * Return: The number of characters printed (excluding
  * the null byte used to end output to strings)
  **/
+
 int _printf(const char *format, ...)
 {
 	int len, i;
@@ -26,23 +27,24 @@ int _printf(const char *format, ...)
 
 	len = 0;
 	
-	for (i = 0; i < format[i]; i++)
+	for (i = 0; format[i]; i++)
 	{
-		if (format[i] = '%')
+		if (format[i] == '%')
 		{
-			alt_len = percent_handler(format, &i, list);
+			int alt_len;
+
+			alt_len += percent_handler(format, &i, list);
 			if (alt_len == 0)
 				return (-1);
 
 			len += alt_len;
 			continue;
 		}
-		//call va_arg to fetch argument
-		len++;
-	} 
 
+		len += write(1, &format[i], 1);
+	}
 
-	va_end(args);
+	va_end(list);
 
 	return (len);
 }

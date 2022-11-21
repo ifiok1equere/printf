@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
   *p_char - print char func
@@ -23,11 +24,12 @@ int print_char(va_list a)
 int print_int(va_list b)
 {
 	int c;
-	int write;
+	int wrt;
 
 	c = va_arg(b, int);
-	write = write(1, &c, 1024);
-	return (write);
+	/*wrt = write(1, &c, 10);*/
+	wrt = printf("%d", c);
+	return (wrt);
 }
 
 /**
@@ -39,11 +41,11 @@ int print_int(va_list b)
 int print_float(va_list x)
 {
 	float c;
-	int write;
+	int wrt;
 
 	c = va_arg(x, double);
-	write = write(1, &c, 1024);
-	return (write);
+	wrt = write(1, &c, 1024);
+	return (wrt);
 }
 
 /**
@@ -55,13 +57,13 @@ int print_float(va_list x)
 int print_string(va_list d)
 {
 	char *c;
-	int write;
+	int wrt;
 
 	if (d == NULL)
 	{
 		return (0);
 	}
 	c = va_arg(d, char *);
-	write = write(1, &c, 1024);
-	return (write);
+	wrt = write(1, &c, 1024);
+	return (wrt);
 }
