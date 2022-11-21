@@ -10,18 +10,18 @@
 
 int percent_handler(const char *format, int *ptr, va_list list)
 {
-	int i, size = 0;
+	int i, var,size = 0;
 
 	format_t format_arr[] = {
 		{'d', print_int}, {'i', print_int},
-		{'s', print_str} /*{'c', print_char}*/
+		{'s', print_string}, {'c', print_char}
 		/*{'x', print_low_hex} {'X', print_upp_hex},*/
 		/*{'o', print_octal} {'u', print_unsigned},*/
 		/*{'b', print_bin}, {'p', print_pointer},*/
 		/*{'R', print_rot}, {'r', print_rev}*/
 	};
 
-	*ptr = ++(*ptr);
+	*ptr = *ptr + 1;
 
 	if (format[*ptr] == '\0')
 		return (0); /* in the case of no char after percent */
@@ -32,17 +32,18 @@ int percent_handler(const char *format, int *ptr, va_list list)
 		return (1);
 	}
 	/* now iterate through the string, find the format and assign appropriate function */
+	var = sizeof(format_arr) / sizeof(format_arr[0]);
 
-	for (i = 0; i < 3; i++)
+	for (i = 0; i < var; i++)
 	{
 		if (format[*ptr] == format_arr[i].format)
 		{
-			format_arr[i].f(list);
+			size = format_arr[i].f(list);
 			return (size);
 		}
 	}
 
 	_putchar('%');
 	_putchar(format[*ptr]);
-	return (0);
+	return (2);
 }
