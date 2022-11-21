@@ -17,10 +17,6 @@
 
 
 int _printf(const char *, ...);
-int _putchar(char c);
-int writef(char *str);
-void print_num(int n);
-int count_num(int n);
 
 int _strlen(const char *);
 
@@ -28,7 +24,7 @@ int _strlen(const char *);
 int percent_handler(const char *, int *, va_list);
 
 /* format functions */
-int print_str(va_list);
+int print_string(va_list);
 int print_char(va_list);
 int print_dec(va_list);
 int print_octal(va_list);
@@ -40,6 +36,11 @@ int print_upp_hex(va_list);
 int print_pointer(va_list);
 int print_rev(va_list);
 int print_rot(va_list);
+int _putchar(char c);
+int writef(char *str);
+void print_num(int n);
+int count_num(int n);
+int print_low_hex();
 
 /**
  * struct format_specifiers - ...
