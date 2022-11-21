@@ -1,6 +1,12 @@
 #include "main.h"
-#include <stdio.h>
-/**/
+
+/**
+  *percent_handler - handles format specifier
+  *@format: string or content to be printed
+  *@ptr: pointer to the index of % character
+  *@list: user input
+  *Return: returns size of character after %
+*/
 
 int percent_handler(const char *format, int *ptr, va_list list)
 {
@@ -38,7 +44,8 @@ int percent_handler(const char *format, int *ptr, va_list list)
 		}
 	}
 
-	write(1, "%", 1), write(1, &format[*ptr], 1);
+	_putchar('%');
+	_putchar(format[*ptr]);
 
 	return (2);
 }

@@ -15,8 +15,12 @@
 #include <unistd.h>
 #include <string.h>
 
-int _printf(const char *, ...);
 
+int _printf(const char *, ...);
+int _putchar(char c);
+int writef(char *str);
+void print_num(int n);
+int count_num(int n);
 
 int _strlen(const char *);
 
