@@ -13,10 +13,10 @@ int percent_handler(const char *format, int *ptr, va_list list)
 	int i, size = 0, arr_size;
 
 	format_t format_arr[] = {
-		{'d', print_int}, {'i', print_int} 
-		/*{'s', print_str}, {'c', print_char}*/
-		/*{'x', print_low_hex} {'X', print_upp_hex},*/
-		/*{'o', print_octal} {'u', print_unsigned},*/
+		{'d', print_int}, {'i', print_int}, 
+		{'s', print_string}, {'c', print_char}
+		/*{'x', print_low_hex}, {'X', print_upp_hex},*/
+		/*{'o', print_octal}, {'u', print_unsigned},*/
 		/*{'b', print_bin}, {'p', print_pointer},*/
 		/*{'R', print_rot}, {'r', print_rev}*/
 	};

@@ -1,36 +1,45 @@
 #include "main.h"
 
+
 /**
-  *p_char - print char func
-  *@a: list
-  *Return: returns 1
-*/
-int print_char(va_list a)
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ * Description: _putchar uses a local buffer of 1024 to call write
+ * as little as possible
+ */
+int _putchar(char c)
 {
-	char c;
-	
-	c = va_arg(a, int);
-	_putchar(c);
+	static char buffer[1024];
+	static int i;
+
+	if (c == -1 || i == 1024)
+	{
+		write(1, buffer, i);
+		i = 0;
+	}
+
+	if (c != -1)
+		buffer[i++] = c;
+
 	return (1);
 }
 
 
 /**
-  *p_string - print string func
-  *@d: list
-  *Return: returns 1
-*/
-
-int print_string(va_list d)
+ * writef - prints a string to stdout
+ * @str: pointer to the string to print
+ * Return: number of chars written
+ */
+int writef (char *s)
 {
-	char *c;
-	int wrt;
+	register int i;
 
-	if (d == NULL)
+	for (i = 0; s[i]; i++)
 	{
-		return (0);
+		_putchar(s[i]);
 	}
-	c = va_arg(d, char *);
-	wrt = writef(c); 
-	return (wrt);
+
+	return (i);
 }
