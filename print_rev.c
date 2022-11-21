@@ -1,6 +1,11 @@
 #include "main.h"
 
-/**/
+/**
+ * print_rev - prints a string in reverse
+ * @list: a pointer to the list of unknown arguments
+ *
+ * @Return: The length of the string printed.
+ */
 
 int print_rev(va_list list)
 {
@@ -14,7 +19,7 @@ int print_rev(va_list list)
 
 	for (i = (len - 1); i >= 0; i--)
 	{
-		/*display output*/
+		_putchar(str[i]);
 	}
 
 	return (len);

@@ -21,14 +21,10 @@ int print_char(va_list a)
   *Return: returns 1
 */
 
-int print_int(va_list b)
+int print_int(va_list list)
 {
-	int c;
-	int wrt;
-
-	c = va_arg(b, int);
-	/*wrt = write(1, &c, 10);*/
-	wrt = printf("%d", c);
+	int c = va_arg(list, int);
+	int wrt = printf("%d", c);
 	return (wrt);
 }
 
