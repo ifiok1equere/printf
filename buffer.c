@@ -29,10 +29,10 @@ int _putchar(char c)
 
 /**
  * writef - prints a string to stdout
- * @str: pointer to the string to print
+ * @s: pointer to the string to print
  * Return: number of chars written
  */
-int writef (char *s)
+int writef(char *s)
 {
 	register int i;
 

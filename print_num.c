@@ -8,6 +8,7 @@
 void print_num(int n)
 {
 	int x;
+
 	if (n < 0)
 	{
 		_putchar('-');
@@ -29,6 +30,7 @@ void print_num(int n)
 int count_num(int n)
 {
 	int count = 0;
+
 	if (n <= 0)
 	{
 		count++;
@@ -41,5 +43,5 @@ int count_num(int n)
 		n /= 10;
 	}
 
-	return ++count;
+	return (++count);
 }

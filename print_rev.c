@@ -3,9 +3,8 @@
 /**
  * print_rev - prints a string in reverse
  * @list: a pointer to the list of unknown arguments
- *
- * @Return: The length of the string printed.
- */
+ * Return: The length of the string printed.
+*/
 
 int print_rev(va_list list)
 {

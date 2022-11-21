@@ -10,7 +10,7 @@
 
 int percent_handler(const char *format, int *ptr, va_list list)
 {
-	int i, var,size = 0;
+	int i, var, size = 0;
 
 	format_t format_arr[] = {
 		{'d', print_int}, {'i', print_int},
@@ -31,7 +31,7 @@ int percent_handler(const char *format, int *ptr, va_list list)
 		_putchar('%'); /*in case the string is %%  */
 		return (1);
 	}
-	/* now iterate through the string, find the format and assign appropriate function */
+
 	var = sizeof(format_arr) / sizeof(format_arr[0]);
 
 	for (i = 0; i < var; i++)

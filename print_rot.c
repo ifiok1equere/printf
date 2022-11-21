@@ -21,7 +21,7 @@ int print_rot(va_list list)
 		}
 		if (str[i_str] != alpha[i_alpha])
 		{
-			_putchar(str[i_str]);		
+			_putchar(str[i_str]);
 		}
 	}
 
