@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * _printf - Produces output according to a format
@@ -18,7 +17,7 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 
-	len = strlen(format);
+	len = _strlen(format);
 
 	if (len == 0)
 		return (0);
