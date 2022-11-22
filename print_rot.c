@@ -27,7 +27,8 @@ int print_rot(va_list list)
 				break;
 			}
 		}
-		_putchar(str[i_str]);
+		if (str[i_str] != alpha[i_alpha])
+			_putchar(str[i_str]);
 	}
 
 	return (i_str);

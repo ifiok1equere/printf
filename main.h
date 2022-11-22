@@ -28,6 +28,7 @@ int print_upp_hex(va_list);
 int print_pointer(va_list);
 int print_rev(va_list);
 int print_rot(va_list);
+int print_S(va_list);
 
 
 /* handler */
