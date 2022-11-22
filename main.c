@@ -19,5 +19,6 @@ int main(void)
 	len2 = _printf("%R\n", "Hello, World!");
 	len3 = _printf("%b\n", 17);
 	_printf("%d, %d, %d, %d\n", len1, len2, len0, len3);
+
 	return (0);
 }
