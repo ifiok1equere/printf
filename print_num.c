@@ -31,17 +31,17 @@ int count_num(int n)
 {
 	int count = 0;
 
-	if (n <= 0)
+	if (n < 0)
 	{
 		count++;
 		n = -n;
 	}
 
-	while ((n / 10) != 0)
+	while (n != 0)
 	{
 		count++;
 		n /= 10;
 	}
 
-	return (++count);
+	return (count);
 }
