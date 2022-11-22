@@ -37,6 +37,7 @@ void print_num(int n);
 int count_num(int n);
 int _strlen(const char *str);
 void print_bin_recursion(int x);
+void print_oct_recursion(int x);
 
 
 /**

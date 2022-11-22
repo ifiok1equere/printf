@@ -10,6 +10,7 @@ int print_octal(va_list list)
 {
 	unsigned int x = 0;
 	int count = 0, num = 0;
+
 	num = va_arg(list, int);
 	x = num;
 
