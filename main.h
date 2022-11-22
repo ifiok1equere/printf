@@ -18,10 +18,6 @@
 
 int _printf(const char *, ...);
 
-int _strlen(const char *);
-
-/* handler */
-int percent_handler(const char *, int *, va_list);
 
 /* format functions */
 int print_string(va_list);
@@ -36,11 +32,17 @@ int print_upp_hex(va_list);
 int print_pointer(va_list);
 int print_rev(va_list);
 int print_rot(va_list);
+
+
+/* handler */
+int percent_handler(const char *, int *, va_list);
+
+/* utilities */
 int _putchar(char c);
 int writef(char *str);
 void print_num(int n);
 int count_num(int n);
-int print_low_hex();
+int _strlen(const char *str);
 
 /**
  * struct format_specifiers - ...
@@ -54,5 +56,10 @@ typedef struct format_specifiers
 	char format;
 	int (*f)(va_list);
 } format_t;
+
+
+
+
+
 
 #endif /*MAIN_H*/

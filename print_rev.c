@@ -8,13 +8,12 @@
 
 int print_rev(va_list list)
 {
-	int i = 0, len = 0;
-	char *str;
+	int i, len;
+	const char *str;
 
 	str = va_arg(list, char *);
 
-	while (str[i++])
-		len++;
+	len =_strlen(str);
 
 	for (i = (len - 1); i >= 0; i--)
 	{
