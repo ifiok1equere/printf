@@ -27,7 +27,7 @@ int print_bin(va_list list)
 		count++;
 		x /= 2;
 	}
-	print_bin_recursion(num / 2);
+	print_bin_recursion(num);
 	return (count);
 }
 
