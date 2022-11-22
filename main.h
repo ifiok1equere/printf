@@ -1,13 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/**
- * File: main.h
- * Auth: Ifiok Equere
- *	 Eromosele Eric
- * Desc: Includes all the prototypes for the printf\
- *	 the printf project.
- */
 
 /* dependencies */
 #include <stdarg.h>
