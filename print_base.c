@@ -28,7 +28,7 @@ char *convert(unsigned long int num, int base, int lowercase)
 }
 
 /**
-  * print_octal - prints a number in binary.
+  * print_bin - prints a number in binary.
   * @list: pointer to a list.
   * Return: number of characters printed.
 */
@@ -38,9 +38,9 @@ int print_bin(va_list list)
 	unsigned int x = 0;
 	int count = 0;
 	char *pr;
-		
+
 	x = va_arg(list, unsigned int);
-	pr = convert(x, 2, 0); 
+	pr = convert(x, 2, 0);
 	count = writef(pr);
 
 	return (count);
