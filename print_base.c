@@ -60,8 +60,7 @@ int print_octal(va_list list)
 
 	x = va_arg(list, unsigned int);
 	pr = convert(x, 8, 0);
-	count = writef("0o");
-	count += writef(pr);
+	count = writef(pr);
 
 	return (count);
 }
@@ -80,8 +79,7 @@ int print_upp_hex(va_list list)
 
 	x = va_arg(list, unsigned int);
 	pr = convert(x, 16, 0);
-	count = writef("0X");
-	count += writef(pr);
+	count = writef(pr);
 
 	return (count);
 }
@@ -99,8 +97,7 @@ int print_low_hex(va_list list)
 
 	x = va_arg(list, unsigned int);
 	pr = convert(x, 16, 1);
-	count = writef("0x");
-	count += writef(pr);
+	count = writef(pr);
 
 	return (count);
 }
