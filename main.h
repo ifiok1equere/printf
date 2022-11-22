@@ -8,6 +8,9 @@
 #include <unistd.h>
 #include <string.h>
 
+/*Macro Definitions*/
+#define UI_MAX 4294967296
+
 
 int _printf(const char *, ...);
 
