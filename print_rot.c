@@ -5,7 +5,6 @@
   *@list: list of output
   *Return: return i_str
 */
-
 int print_rot(va_list list)
 {
 	char *str = va_arg(list, char *);
@@ -28,11 +27,7 @@ int print_rot(va_list list)
 				break;
 			}
 		}
-
-		if (str[i_str] != alpha[i_alpha])
-		{
-			_putchar(str[i_str]);
-		}
+		_putchar(str[i_str]);
 	}
 
 	return (i_str);
