@@ -36,8 +36,7 @@ int writef(char *str);
 void print_num(int n);
 int count_num(int n);
 int _strlen(const char *str);
-void print_bin_recursion(int x);
-
+char *convert(unsigned long int num, int base, int lowercase);
 
 /**
  * struct format_specifiers - ...
@@ -45,16 +44,12 @@ void print_bin_recursion(int x);
  * @format: specifier
  * @f: function corresponding with the appropriate
  *	specifier.
- */
+*/
+
 typedef struct format_specifiers
 {
 	char format;
 	int (*f)(va_list);
 } format_t;
-
-
-
-
-
 
 #endif /*MAIN_H*/
