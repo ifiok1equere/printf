@@ -45,7 +45,12 @@ int count_num(int n)
 
 	return (count);
 }
-
+/**
+ * print_unsigned - prints an unsigned integer.
+ * list: list to unknown args.
+ *
+ * Return: a pointer to the string of numbers.
+ */
 int  print_unsigned(va_list list)
 {
 	char *ptr;

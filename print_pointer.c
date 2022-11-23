@@ -2,9 +2,7 @@
 
 /**
  * print_pointer - prints address of input in hexa format
- * @l: va_list arguments from _printf
- * @f: pointer to the struct flags that determines
- * if a flag is passed to _printf
+ * @list: va_list arguments from _printf
  * Return: number of char printed
  */
 int print_pointer(va_list list)
@@ -15,6 +13,10 @@ int print_pointer(va_list list)
 
 	if (!num)
 		return (writef("(nil)"));
+
+	if (num == -1)
+		count += writef("ffffffffffffffff");
+
 	str = convert(num, 16, 1);
 	count += writef("0x");
 	count += writef(str);
