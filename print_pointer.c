@@ -14,10 +14,10 @@ int print_pointer(va_list list)
 	if (!num)
 		return (writef("(nil)"));
 
-	if (num == -1)
+	str = convert(num, 16, 1);
+	if (str == (char *)-1)	
 		count += writef("ffffffffffffffff");
 
-	str = convert(num, 16, 1);
 	count += writef("0x");
 	count += writef(str);
 	return (count);
