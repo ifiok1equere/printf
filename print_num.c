@@ -50,7 +50,7 @@ int  print_unsigned(va_list list)
 {
 	char *ptr;
 	int x;
-	
+
 	ptr = convert((unsigned int)va_arg(list, int), 10, 0);
 	x = writef(ptr);
 
