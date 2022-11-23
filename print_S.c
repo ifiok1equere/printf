@@ -13,11 +13,8 @@ int print_S(va_list list)
 
 	str = va_arg(list, char *);
 
-	if (str == NULL)
-	{
-		count = writef("(null)");
-		return (count);
-	}
+	if (!str)
+		return (writef("(null)"));
 	for (i = 0; str[i]; i++)
 	{
 		if (str[i] > 0 && (str[i] < 32 || str[i] >= 127))
@@ -25,7 +22,7 @@ int print_S(va_list list)
 			count = writef("\\x");
 			s = convert(str[i], 16, 0);
 
-			if (s[1] == '\0')
+			if (!s[1])
 				count += _putchar('0');
 			count += writef(s);
 		}
