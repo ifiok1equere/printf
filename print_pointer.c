@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * print_pointer - prints address of input in hexa format
@@ -15,10 +16,10 @@ int print_pointer(va_list list)
 		return (writef("(nil)"));
 
 	str = convert(num, 16, 1);
-	if (str == (char *)-1)	
-		count += writef("ffffffffffffffff");
-
 	count += writef("0x");
-	count += writef(str);
+	if (!strcmp(str, "-1"))
+		count += writef("ffffffffffffffff");
+	else
+		count += writef(str);
 	return (count);
 }

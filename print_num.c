@@ -16,7 +16,7 @@ void print_num(int n)
 	}
 	else
 		x = n;
-	if (x / 10)
+	if (x != 0)
 		print_num(x / 10);
 
 	_putchar((x % 10) + '0');
@@ -36,6 +36,9 @@ int count_num(int n)
 		count++;
 		n = -n;
 	}
+
+	if (n == 0)
+		return (1);
 
 	while (n != 0)
 	{

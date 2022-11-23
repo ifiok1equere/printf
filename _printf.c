@@ -33,8 +33,6 @@ int _printf(const char *format, ...)
 			int alt_len;
 
 			alt_len = percent_handler(format, &i, list);
-			if (alt_len == 0)
-				return (-1);
 
 			len += alt_len;
 			continue;

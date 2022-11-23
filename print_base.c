@@ -48,6 +48,7 @@ int print_bin(va_list list)
 	char *pr;
 
 	x = va_arg(list, unsigned int);
+
 	pr = convert(x, 2, 0);
 	count = writef(pr);
 

@@ -8,12 +8,22 @@
 
 int print_int(va_list list)
 {
-	int count;
+	char *str;
+	int count = 0;
+	unsigned int x;
 
 	int n = va_arg(list, int);
 
-	print_num(n);
-	count = count_num(n);
+	if (n < 0)
+	{
+		_putchar('-');
+		count++;
+		x = -n;
+	}
+	else
+		x = n;
+	str = convert(x, 10, 0);
+	count += writef(str);
 
 	return (count);
 }
