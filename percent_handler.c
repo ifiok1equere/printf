@@ -13,7 +13,7 @@ int percent_handler(const char *format, int *ptr, va_list list)
 	int i, var, size = 0;
 
 	format_t format_arr[] = {
-		{'d', print_int}, {'i', print_int},
+		{'d', print_dec}, {'i', print_int},
 		{'s', print_string}, {'c', print_char},
 		{'x', print_low_hex}, {'X', print_upp_hex},
 		{'o', print_octal}, {'u', print_unsigned},
@@ -26,6 +26,12 @@ int percent_handler(const char *format, int *ptr, va_list list)
 
 	if (format[*ptr] == '\0')
 		return (0); /* in the case of no char after percent */
+
+	if (format[*ptr] == '%')
+	{
+		_putchar('%');
+		return (1);
+	}
 
 	var = sizeof(format_arr) / sizeof(format_arr[0]);
 

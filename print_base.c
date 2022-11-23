@@ -14,11 +14,19 @@ char *convert(unsigned long int num, int base, int lowercase)
 	static char buffer[50];
 	char *ptr;
 
+	if ((long int)num < 0)
+	{
+		_putchar('-');
+		num = -num;
+	}
+
 	rep = (lowercase)
 		? "0123456789abcdef"
 		: "0123456789ABCDEF";
+
 	ptr = &buffer[49];
 	*ptr = '\0';
+
 	do {
 		*--ptr = rep[num % base];
 		num /= base;
