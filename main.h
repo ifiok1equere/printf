@@ -29,7 +29,7 @@ int print_pointer(va_list);
 int print_rev(va_list);
 int print_rot(va_list);
 int print_S(va_list);
-
+int print_percent(va_list);
 
 /* handler */
 int percent_handler(const char *, int *, va_list);

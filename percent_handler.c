@@ -19,19 +19,13 @@ int percent_handler(const char *format, int *ptr, va_list list)
 		{'o', print_octal}, {'u', print_unsigned},
 		{'b', print_bin}, /*{'p', print_pointer},*/
 		{'R', print_rot}, {'r', print_rev},
-		{'S', print_S}
+		{'S', print_S}, {'%', print_percent}
 	};
 
 	*ptr = *ptr + 1;
 
 	if (format[*ptr] == '\0')
 		return (0); /* in the case of no char after percent */
-
-	if (format[*ptr] == '%')
-	{
-		_putchar('%'); /*in case the string is %%  */
-		return (1);
-	}
 
 	var = sizeof(format_arr) / sizeof(format_arr[0]);
 
