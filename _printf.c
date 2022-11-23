@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 
 		len += _putchar(format[i]);
 	}
-	_putchar(0);
+	_putchar(-1);
 
 	va_end(list);
 
