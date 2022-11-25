@@ -8,7 +8,7 @@
 
 int print_rev(va_list list)
 {
-	int i, len;
+	int i, len, count;
 	const char *str;
 
 	str = va_arg(list, char *);
@@ -21,7 +21,8 @@ int print_rev(va_list list)
 	for (i = (len - 1); i >= 0; i--)
 	{
 		_putchar(str[i]);
+		count++;
 	}
 
-	return (len);
+	return (count);
 }

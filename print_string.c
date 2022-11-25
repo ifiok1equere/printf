@@ -1,36 +1,37 @@
 #include "main.h"
 
 /**
-  *print_char - print char func
-  *@a: list
+  *print_char - print character
+  *@a: list pointer.
   *Return: returns 1
 */
 int print_char(va_list a)
 {
 	char c;
-
 	c = va_arg(a, int);
-	_putchar(c);
-	return (1);
+
+	return (_putchar(c));
 }
 
 
 /**
-  *print_string - print string func
-  *@d: list
-  *Return: returns 1
+ *print_string - print strings
+ *@d: list pointer.
+ *Return: returns length of printed
+ *	  characters.
 */
 
 int print_string(va_list d)
 {
 	char *c;
-	int wrt;
+	int count = 0;
 
-	if (d == NULL)
-	{
-		return (0);
-	}
 	c = va_arg(d, char *);
-	wrt = writef(c);
-	return (wrt);
+
+	if (c == NULL)
+		count = writef("(null)");
+	else
+		count += writef(c);
+
+	return (count);
 }

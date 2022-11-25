@@ -16,10 +16,13 @@ int print_pointer(va_list list)
 		return (writef("(nil)"));
 
 	str = convert(num, 16, 1);
+
 	count += writef("0x");
-	if (!strcmp(str, "-1"))
+
+	if ((int)num == -1)
 		count += writef("ffffffffffffffff");
 	else
 		count += writef(str);
+
 	return (count);
 }

@@ -8,7 +8,7 @@
 int print_rot(va_list list)
 {
 	char *str = va_arg(list, char *);
-	int i_str, i_alpha;
+	int i_str, i_alpha, count;
 	char *alpha, *rot;
 
 	if (str == NULL)
@@ -24,11 +24,15 @@ int print_rot(va_list list)
 			if (str[i_str] == alpha[i_alpha])
 			{
 				_putchar(rot[i_alpha]);
+				count++;
 				break;
 			}
 		}
 		if (str[i_str] != alpha[i_alpha])
+		{
 			_putchar(str[i_str]);
+			count++;
+		}
 	}
 
 	return (i_str);
