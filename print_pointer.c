@@ -9,20 +9,21 @@
 int print_pointer(va_list list)
 {
 	char *str;
-	unsigned long int num = va_arg(list, unsigned long int);
+	int num = va_arg(list, int);
 	int count = 0;
 
 	if (!num)
 		return (writef("(nil)"));
 
-	str = convert(num, 16, 1);
-
 	count += writef("0x");
 
-	if ((int)num == -1)
+	if (num == -1)
 		count += writef("ffffffffffffffff");
 	else
-		count += writef(str);
+	{
+		str = convert(num, 16, 1);
+		count += writef(str);	
+	}
 
 	return (count);
 }
