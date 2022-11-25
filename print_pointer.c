@@ -9,7 +9,7 @@
 int print_pointer(va_list list)
 {
 	char *str;
-	int num = va_arg(list, int);
+	unsigned long int num = va_arg(list, unsigned long int);
 	int count = 0;
 
 	if (!num)
@@ -17,12 +17,12 @@ int print_pointer(va_list list)
 
 	count += writef("0x");
 
-	if (num == -1)
+	if ((int)num == -1)
 		count += writef("ffffffffffffffff");
 	else
 	{
 		str = convert(num, 16, 1);
-		count += writef(str);	
+		count += writef(str);
 	}
 
 	return (count);
